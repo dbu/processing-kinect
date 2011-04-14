@@ -59,19 +59,21 @@
 
             var wsUri;
 
-            wsUri = "ws://echo.websocket.org/";
-            //wsUri = "ws://127.0.0.1:8888";
+            //wsUri = "ws://echo.websocket.org/";
+            wsUri = "ws://127.0.0.1:8888";
 
             websocket = new WebSocket(wsUri);
             websocket.onmessage = function(evt) { onMessage(evt) };
             websocket.onopen = function(evt) {
                   // DEMO:
-//                for (var i = 1; i < 5; i++) {
-//                    setTimeout("websocket.send('left');websocket.send('push');", i * 1000);
-//                }
-//                for (var i = 5; i < 10; i++) {
-//                    setTimeout("websocket.send('right');", i * 1000);
-//                }
+/*
+                for (var i = 1; i < 5; i++) {
+                    setTimeout("websocket.send('left');websocket.send('push');", i * 1000);
+                }
+                for (var i = 5; i < 10; i++) {
+                    setTimeout("websocket.send('right');", i * 1000);
+                }
+*/
             };
         }
 
